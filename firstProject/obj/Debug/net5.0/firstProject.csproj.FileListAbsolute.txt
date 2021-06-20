@@ -1,0 +1,15 @@
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/bin/Debug/net5.0/firstProject.deps.json
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/bin/Debug/net5.0/firstProject.runtimeconfig.json
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/bin/Debug/net5.0/firstProject.runtimeconfig.dev.json
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/bin/Debug/net5.0/firstProject.dll
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/bin/Debug/net5.0/ref/firstProject.dll
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/bin/Debug/net5.0/firstProject.pdb
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.csprojAssemblyReference.cache
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.AssemblyInfoInputs.cache
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.AssemblyInfo.cs
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.csproj.CoreCompileInputs.cache
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.dll
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/ref/firstProject.dll
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.pdb
+/Users/jasonbrady/Documents/Dojo/CSharp/firstProject/obj/Debug/net5.0/firstProject.genruntimeconfig.cache
