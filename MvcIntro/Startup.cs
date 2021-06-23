@@ -28,8 +28,8 @@ namespace MvcIntro
             {
                 app.UseDeveloperExceptionPage();
             }
-
-           app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc();
         }
     }
 }

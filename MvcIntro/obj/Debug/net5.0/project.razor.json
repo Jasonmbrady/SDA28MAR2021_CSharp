@@ -15619,8 +15619,23 @@
   "RootNamespace": "MvcIntro",
   "Documents": [
     {
+      "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/Views/Food/Index.cshtml",
+      "TargetPath": "Views\\Food\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/Views/Hello/Index.cshtml",
       "TargetPath": "Views\\Hello\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/Views/First/Test.cshtml",
+      "TargetPath": "Views\\First\\Test.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/Views/First/Depends.cshtml",
+      "TargetPath": "Views\\First\\Depends.cshtml",
       "FileKind": "mvc"
     }
   ],

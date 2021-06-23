@@ -31,3 +31,6 @@
 /Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/obj/Debug/net5.0/MvcIntro.RazorTargetAssemblyInfo.cs
 /Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/obj/Debug/net5.0/MvcIntro.Views.pdb
 /Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/obj/Debug/net5.0/MvcIntro.csproj.CopyComplete
+/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/obj/Debug/net5.0/Razor/Views/Food/Index.cshtml.g.cs
+/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/obj/Debug/net5.0/Razor/Views/First/Test.cshtml.g.cs
+/Users/jasonbrady/Documents/Dojo/CSharp/MvcIntro/obj/Debug/net5.0/Razor/Views/First/Depends.cshtml.g.cs

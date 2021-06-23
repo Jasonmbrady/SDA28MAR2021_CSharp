@@ -4,8 +4,8 @@ namespace MvcIntro.Controllers
 {
     public class HelloController : Controller
     {
-        [HttpGet]
-        [Route("")]
+        // [HttpGet]
+        // [Route("")]
         public ViewResult Index()
         {
             return View();
