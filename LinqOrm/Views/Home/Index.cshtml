@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div>
+    <h1>Hello, World!</h1>
+    @{
+        foreach (string combo in ViewBag.Allit){
+            <p>@combo</p>
+        }
+    }
+</div>

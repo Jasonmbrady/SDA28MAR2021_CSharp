@@ -42,9 +42,10 @@ namespace Partials
                 app.UseHsts();
             }
             app.UseStaticFiles();
-            app.UseSession();
             app.UseAuthorization();
+            app.UseSession();
             app.UseMvc();
+
         }
     }
 }
