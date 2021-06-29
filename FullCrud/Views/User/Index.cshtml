@@ -10,7 +10,7 @@
 @{
     foreach(User u in ViewBag.AllUnicorns)
     {
-        <li><a href="/@u.UserId">@u.FirstName</a></li>
+        <li><a href="/@u.UserId">@u.FirstName</a> <a href="/delete/@u.UserId"><button>DELETE</button></a></li>
     }
 }
     </ul>

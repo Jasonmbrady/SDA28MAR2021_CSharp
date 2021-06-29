@@ -1,3 +1,11 @@
 @model User;
 
-<h3>@Model.FirstName</h3>
+<form asp-action="Update" asp-controller="User" method="post">
+    <div><span asp-validation-for="FirstName"></span></div>
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" value=@Model.FirstName>
+    <button>Update</button>
+</form>
+<div>
+    <a href="/delete/@Model.UserId"><button>DELETE</button></a>
+</div>
