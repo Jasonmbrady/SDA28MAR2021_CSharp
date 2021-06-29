@@ -15619,6 +15619,11 @@
   "RootNamespace": "DachiDemo",
   "Documents": [
     {
+      "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/DachiDemo/Views/Home/Win.cshtml",
+      "TargetPath": "Views\\Home\\Win.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/DachiDemo/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15636,6 +15641,11 @@
     {
       "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/DachiDemo/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/DachiDemo/Views/Home/Lose.cshtml",
+      "TargetPath": "Views\\Home\\Lose.cshtml",
       "FileKind": "mvc"
     }
   ],
