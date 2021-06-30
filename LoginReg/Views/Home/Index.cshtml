@@ -1,0 +1,40 @@
+﻿@model User;
+@{
+    if (ViewBag.Error != null)
+    {
+        <p class="text-danger">@ViewBag.Error</p>
+    }
+}
+<h3>Register Here!</h3>
+<p>or <a href="/login">Click Here</a> to log in!</p>
+<form asp-action="Create" asp-controller="Home" method="post">
+    <div>
+        <div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+    </div>
+    <div>
+        <div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+    <div>
+        <div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+    </div>
+    <div>
+        <div>
+            <span asp-validation-for="Confirm" class="text-danger"></span>
+        </div>
+        <label asp-for="Confirm"></label>
+        <input asp-for="Confirm">
+    </div>
+    <button>Create</button>
+</form>

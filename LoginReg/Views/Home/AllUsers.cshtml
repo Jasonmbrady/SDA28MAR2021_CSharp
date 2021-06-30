@@ -1,0 +1,8 @@
+<h3>All Users:</h3>
+@{
+    foreach (User u in ViewBag.AllUsers)
+    {
+        <h3>@u.Name</h3>
+        <p>@u.Email</p>
+    }
+}
