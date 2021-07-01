@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 namespace LoginReg.Models
 {
     public class User
@@ -24,5 +25,6 @@ namespace LoginReg.Models
         [DataType(DataType.Password)]
         [Display(Name ="Confirm Password")]
         public string Confirm {get;set;}
+        public List<Message> CreatedMessages {get;set;}
     }
 }

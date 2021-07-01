@@ -6,5 +6,6 @@ namespace LoginReg.Models
     {
         public LogRegContext(DbContextOptions options) : base(options){}
         public DbSet<User> Users {get;set;}
+        public DbSet<Message> Messages {get;set;}
     }
 }

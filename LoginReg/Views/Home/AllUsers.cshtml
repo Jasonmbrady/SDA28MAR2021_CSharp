@@ -1,8 +1,16 @@
 <h3>All Users:</h3>
+@model Message;
+<form asp-action="AddMessage" method="post">
+    <Textarea asp-for="Content"></Textarea>
+    <button>Create Message</button>
+</form>
 @{
     foreach (User u in ViewBag.AllUsers)
     {
-        <h3>@u.Name</h3>
+        <p>@u.Name</p>
         <p>@u.Email</p>
+        foreach (Message msg in u.CreatedMessages){
+            <p>@msg.Content</p>
+        }
     }
 }

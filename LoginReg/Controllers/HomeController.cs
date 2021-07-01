@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using LoginReg.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LoginReg.Controllers
 {
@@ -52,7 +53,7 @@ namespace LoginReg.Controllers
         {
             if (HttpContext.Session.GetInt32("LoggedUser") != null)
             {
-                ViewBag.AllUsers = DbContext.Users.ToList();
+                ViewBag.AllUsers = DbContext.Users.Include(u => u.CreatedMessages).ToList();
                 return View();
             }
             else
@@ -95,6 +96,16 @@ namespace LoginReg.Controllers
             {
                 return View("Login");
             }
+        }
+
+        [HttpPost("addmessage")]
+        public RedirectToActionResult AddMessage(Message msg)
+        {
+            int? thisId = HttpContext.Session.GetInt32("LoggedUser");
+            msg.UserId = (int)thisId;
+            DbContext.Add(msg);
+            DbContext.SaveChanges();
+            return RedirectToAction("AllUsers");
         }
     }
 }
