@@ -1,0 +1,5 @@
+@model Message;
+<form asp-action="AddMessage" asp-controller="User" method="post">
+    <textarea asp-for="Content"></textarea>
+    <button>Add Message</button>
+</form>

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace FullCrud.Models
@@ -16,5 +17,7 @@ namespace FullCrud.Models
 
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
+
+        public List<Message> CreatedMessages {get;set;}
     }
 }

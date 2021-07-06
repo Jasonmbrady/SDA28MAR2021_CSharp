@@ -9,3 +9,9 @@
 <div>
     <a href="/delete/@Model.UserId"><button>DELETE</button></a>
 </div>
+<partial name="AddMessage" view-data="ViewData" />
+@{
+    foreach (Message msg in Model.CreatedMessages){
+        <p>@msg.Content</p>
+    }
+}

@@ -49,3 +49,4 @@
 /Users/jasonbrady/Documents/Dojo/CSharp/FullCrud/obj/Debug/net5.0/FullCrud.genruntimeconfig.cache
 /Users/jasonbrady/Documents/Dojo/CSharp/FullCrud/obj/Debug/net5.0/Razor/Views/User/Index.cshtml.g.cs
 /Users/jasonbrady/Documents/Dojo/CSharp/FullCrud/obj/Debug/net5.0/Razor/Views/User/Detail.cshtml.g.cs
+/Users/jasonbrady/Documents/Dojo/CSharp/FullCrud/obj/Debug/net5.0/Razor/Views/User/AddMessage.cshtml.g.cs

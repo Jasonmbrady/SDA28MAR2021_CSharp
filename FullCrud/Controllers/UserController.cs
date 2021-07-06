@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using FullCrud.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FullCrud.Controllers
 {
@@ -37,7 +38,8 @@ namespace FullCrud.Controllers
         [HttpGet("{id}")]
         public ViewResult Detail(int id)
         {
-            User thisUser = DbContext.Users.FirstOrDefault(user => user.UserId == id);
+            User thisUser = DbContext.Users.Include( u => u.CreatedMessages).FirstOrDefault(user => user.UserId == id);
+            ViewBag.UserId = thisUser.UserId;
             return View("Detail", thisUser);
         }
         [HttpPost("Update/{id}")]
@@ -63,6 +65,12 @@ namespace FullCrud.Controllers
             DbContext.Users.Remove(DelUser);
             DbContext.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [HttpPost("addmessage")]
+        public RedirectToActionResult AddMessage(Message msg)
+        {
+            return RedirectToAction("Detail");
         }
     }
 }

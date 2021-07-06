@@ -15662,6 +15662,11 @@
       "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/FullCrud/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jasonbrady/Documents/Dojo/CSharp/FullCrud/Views/User/AddMessage.cshtml",
+      "TargetPath": "Views\\User\\AddMessage.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
