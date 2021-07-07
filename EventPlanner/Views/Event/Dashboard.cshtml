@@ -1,11 +1,13 @@
 @model List<Event>;
-
+@{
+    int UserID = (int)Context.Session.GetInt32("uid");
+}
 <div class="header">
     <h3>Welcome to the Event Planner</h3>
     <p><a href="/logout">Log Out</a></p>
 </div>
 <div class="content">
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <td>Event</td>
@@ -19,12 +21,24 @@
                 foreach (Event e in Model)
                 {
                     <tr>
-                        <td>@e.Title</td>
+                        <td><a href="/event/@e.EventId">@e.Title</a></td>
                         <td>@e.Date</td>
                         <td>@e.Attendees.Count</td>
                         <td>
                             @{
                                 // if this user is creator, delete button
+                                if (e.Creator.UserId == UserID)
+                                {
+                                    <a href="/event/delete/@e.EventId"><button>Delete</button></a>
+                                }
+                                else if (e.Attendees.Any( a => a.UserId == UserID))
+                                {
+                                    <a href="/event/leave/@e.EventId"><button>Leave</button></a>
+                                }
+                                else
+                                {
+                                    <a href="/event/join/@e.EventId"><button>Join</button></a>
+                                }
                                 // else if joined, unjoin, and vice versa
                             }
                         </td>

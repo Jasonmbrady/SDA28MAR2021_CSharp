@@ -28,6 +28,7 @@ namespace EventPlanner
             services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddSession();
             services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

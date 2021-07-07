@@ -52,3 +52,5 @@
 /Users/jasonbrady/EventPlanner/obj/Debug/net5.0/Razor/Views/Event/Dashboard.cshtml.g.cs
 /Users/jasonbrady/EventPlanner/obj/Debug/net5.0/Razor/Views/Event/LogError.cshtml.g.cs
 /Users/jasonbrady/EventPlanner/obj/Debug/net5.0/Razor/Views/Event/NewEvent.cshtml.g.cs
+/Users/jasonbrady/EventPlanner/obj/Debug/net5.0/Razor/Views/Event/Detail.cshtml.g.cs
+/Users/jasonbrady/EventPlanner/obj/Debug/net5.0/Razor/Views/Event/EditEvent.cshtml.g.cs

@@ -15619,6 +15619,16 @@
   "RootNamespace": "EventPlanner",
   "Documents": [
     {
+      "FilePath": "/Users/jasonbrady/EventPlanner/Views/Event/Detail.cshtml",
+      "TargetPath": "Views\\Event\\Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jasonbrady/EventPlanner/Views/Event/EditEvent.cshtml",
+      "TargetPath": "Views\\Event\\EditEvent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/jasonbrady/EventPlanner/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

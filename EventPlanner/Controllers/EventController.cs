@@ -22,6 +22,7 @@ namespace EventPlanner.Controllers
             if (HttpContext.Session.GetInt32("uid") != null)
             {
                 List<Event> allEvents = _context.Events
+                .Include( e => e.Creator)
                 .Include( e => e.Attendees)
                 .ThenInclude( a => a.User)
                 .ToList();
@@ -65,12 +66,76 @@ namespace EventPlanner.Controllers
                     newEvent.UserId = (int)HttpContext.Session.GetInt32("uid");
                     _context.Events.Add(newEvent);
                     _context.SaveChanges();
-                    return RedirectToAction("Dashboard");
+                    return Redirect($"/event/{newEvent.EventId}");
                 }
             }
             else 
             {
                 return View("NewEvent");
+            }
+        }
+        [HttpGet("event/delete/{eid}")]
+        public RedirectToActionResult DeleteEvent(int eid)
+        {
+            Event EventToDelete = _context.Events.SingleOrDefault(e => e.EventId == eid);
+            _context.Remove(EventToDelete);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+        [HttpGet("event/join/{eid}")]
+        public RedirectToActionResult JoinEvent(int eid)
+        {
+            Attendee thisAttendee = new Attendee();
+            thisAttendee.UserId = (int)HttpContext.Session.GetInt32("uid");
+            thisAttendee.EventId = eid;
+            _context.Attendees.Add(thisAttendee);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
+        [HttpGet("event/leave/{eid}")]
+        public RedirectToActionResult LeaveEvent(int eid)
+        {
+            Attendee thisAttendee = _context.Attendees.FirstOrDefault( a => a.EventId == eid && a.UserId == (int)HttpContext.Session.GetInt32("uid"));
+            _context.Attendees.Remove(thisAttendee);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
+        [HttpGet("event/{eid}")]
+        public ViewResult EventDetail(int eid)
+        {
+            Event thisEvent = _context.Events
+            .Include( e => e.Attendees)
+            .ThenInclude( a => a.User)
+            .FirstOrDefault(e => e.EventId == eid);
+            return View("Detail", thisEvent);
+        }
+
+        [HttpGet("event/edit/{eid}")]
+        public ViewResult EditEvent(int eid)
+        {
+            Event thisEvent = _context.Events.FirstOrDefault(e => e.EventId == eid);
+
+            return View("EditEvent", thisEvent);
+        }
+
+        [HttpPost("event/processedit/{eid}")]
+        public IActionResult ProcessEditEvent(int eid, Event editedEvent)
+        {
+            Event thisEvent = _context.Events.FirstOrDefault(e => e.EventId == eid);
+            if(ModelState.IsValid)
+            {
+                thisEvent.Title = editedEvent.Title;
+                thisEvent.Date = editedEvent.Date;
+                thisEvent.Description = editedEvent.Description;
+                thisEvent.UpdatedAt = DateTime.Now;
+                _context.SaveChanges();
+                return Redirect($"/event/{thisEvent.EventId}");
+            }
+            else
+            {
+                return View("EditEvent", thisEvent);
             }
         }
     }
