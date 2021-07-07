@@ -1,1 +1,39 @@
-<h1>Hello World!</h1>
+@model List<Event>;
+
+<div class="header">
+    <h3>Welcome to the Event Planner</h3>
+    <p><a href="/logout">Log Out</a></p>
+</div>
+<div class="content">
+    <table>
+        <thead>
+            <tr>
+                <td>Event</td>
+                <td>Date</td>
+                <td>Attendees</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (Event e in Model)
+                {
+                    <tr>
+                        <td>@e.Title</td>
+                        <td>@e.Date</td>
+                        <td>@e.Attendees.Count</td>
+                        <td>
+                            @{
+                                // if this user is creator, delete button
+                                // else if joined, unjoin, and vice versa
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    <a href="/event/new"><button>New Event</button></a>
+</div>

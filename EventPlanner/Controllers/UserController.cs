@@ -60,7 +60,7 @@ namespace EventPlanner.Controllers
                 User userInDB = _context.Users.FirstOrDefault( u => u.Email == logUser.logEmail);
                 if (userInDB == null)
                 {
-                    ModelState.AddModelError("Email", "Invalid Login Credentials");
+                    ModelState.AddModelError("logEmail", "Invalid Login Credentials");
                     return View("Index");
                 }
                 else
@@ -71,7 +71,7 @@ namespace EventPlanner.Controllers
 
                     if (result == 0)
                     {
-                        ModelState.AddModelError("Email", "Invalid Login Credentials");
+                        ModelState.AddModelError("logEmail", "Invalid Login Credentials");
                         return View("Index");
                     }
                     else

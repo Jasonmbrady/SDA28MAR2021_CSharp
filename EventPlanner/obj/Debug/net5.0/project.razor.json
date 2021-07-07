@@ -15629,6 +15629,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/jasonbrady/EventPlanner/Views/Event/LogError.cshtml",
+      "TargetPath": "Views\\Event\\LogError.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/jasonbrady/EventPlanner/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -15666,6 +15671,11 @@
     {
       "FilePath": "/Users/jasonbrady/EventPlanner/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jasonbrady/EventPlanner/Views/Event/NewEvent.cshtml",
+      "TargetPath": "Views\\Event\\NewEvent.cshtml",
       "FileKind": "mvc"
     }
   ],

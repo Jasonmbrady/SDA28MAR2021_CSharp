@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace EventPlanner.Models
 {
@@ -28,6 +29,8 @@ namespace EventPlanner.Models
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
 
+        public List<Event> CreatedEvents {get;set;}
+        public List<Attendee> AttendedEvents {get;set;}
 
     }
 }
